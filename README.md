@@ -19,7 +19,7 @@ OR, download zip and include scripts manually. All production-ready scripts are 
 ```
 
 ### Server-Side Requests
-FlySmartApp.com does not allow for Cross Site Scripting(XSS.) You can include [the curl.php script here](https://github.com/BlueBiteLLC/OAuth-Lite) in your root directory and point the Flight Status Widget at the script using the `serverSideScript` option.
+FlySmartApp.com does not allow for Cross Site Scripting(XSS.) You can include [the curl.php script here](https://github.com/BlueBiteLLC/OAuth-Lite/blob/master/curl.php) in your root directory and point the Flight Status Widget at the script using the `serverSideScript` option. Just use the relative path of the script from flight-status.js.
 
 
 ### Local Storage
