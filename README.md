@@ -37,13 +37,11 @@ Include css file in head:
 <link rel="stylesheet" href="flight-status.css">
 ```
 
-
 ### Set Up the Widget
 
 ```html
 <div class="my-class"></div>
 ```
-
 
 ```javascript
 <script>
@@ -60,7 +58,6 @@ airport|string|null|Shortcode for airport (ex: 'EWR' or 'LGA')
 count|int|10|Number of flights we'd like to list
 serverSideScript|string|'../oauth.php'|Server-side script for XSS
 cacheTime|int|30|How long we should cache the API results in minutes. Not applicable if local-storage-lite script is included
-
 
 ### Make bare requests without widget
 Currently only accepts a single search term as the third parameter.
