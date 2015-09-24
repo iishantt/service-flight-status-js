@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flight Status Widget</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="dist/flight-status.css">
+	</head>
+
+	<body>
+
+        <div class="example"></div>
+
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="dist/flight-status.js"></script>
+        <script>
+            $( document ).ready(function() {
+                $('.example').flightWidget({
+                    airport: 'EWR',
+                    count: 25
+                });
+            });
+        </script>
+
+	</body>
+</html>

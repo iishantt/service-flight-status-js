@@ -1,0 +1,67 @@
+.flight-status {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.flight-status .toggles {
+  width: 100%;
+  padding: 10px 0;
+}
+.flight-status .toggles span {
+  font-size: 14px;
+  text-transform: capitalize;
+  display: inline-block;
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 1px solid darkgrey;
+  line-height: 1;
+}
+.flight-status .toggles span:last-child {
+  border-right: none;
+}
+.flight-status span[data-toggle] {
+  color: darkgrey;
+}
+.flight-status span[data-toggle].active {
+  color: black;
+}
+.flight-status div[data-type] {
+  display: none;
+}
+.flight-status div[data-type] div {
+  padding: 7px 0;
+}
+.flight-status div[data-type].active {
+  display: block;
+}
+.flight-status div[data-type] .flight {
+  width: 100%;
+}
+.flight-status div[data-type] span {
+  display: inline-block;
+  width: 33%;
+}
+.flight-status div[data-type] span.airport, .flight-status div[data-type] span.number {
+  float: right;
+  color: darkgrey;
+}
+.flight-status div[data-type] span.airport {
+  text-align: center;
+}
+.flight-status div[data-type] span.number {
+  text-align: right;
+}
+.flight-status div[data-type] span.name {
+  width: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: black;
+}
+.flight-status div[data-type] span.delayed {
+  color: red;
+}
+.flight-status div[data-type] span.on-time {
+  color: green;
+}
+
+/*# sourceMappingURL=flight-status.css.map */

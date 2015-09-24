@@ -1,0 +1,24 @@
+{
+  "name": "flight-status",
+  "version": "0.0.1",
+  "description": "Flight Status",
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "local-storage-lite": "*"
+  },
+  "homepage": "https://github.com/BlueBiteLLC/Yelp-Widget.git",
+  "authors": [
+    "Matt O'Connell <mattoconnell408@gmail.com>"
+  ],
+  "keywords": [
+    "flight status",
+    "jquery",
+    "widget"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}

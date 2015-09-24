@@ -1,0 +1,48 @@
+.flight-status
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 300
+    .toggles
+        width: 100%
+        padding: 10px 0
+        span
+            font-size: 14px
+            text-transform: capitalize
+            display: inline-block
+            padding-right: 5px
+            margin-right: 5px
+            border-right: 1px solid darkgrey
+            line-height: 1
+            &:last-child
+                border-right: none
+    span[data-toggle]
+        color: darkgrey
+        &.active
+            color: black
+    div[data-type]
+        display: none
+        div
+            padding: 7px 0
+        &.active
+            display: block
+        .flight
+            width: 100%
+        span
+            display: inline-block
+            width: 33%
+            &.airport, &.number
+                float: right
+                color: darkgrey
+            &.airport
+                text-align: center
+            &.number
+                text-align: right
+            &.name
+                width: 60%
+                text-overflow: ellipsis
+                white-space: nowrap
+                overflow: hidden
+                color: black
+            &.delayed
+                color: red
+            &.on-time
+                color: green
