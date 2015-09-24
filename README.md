@@ -68,7 +68,8 @@ Currently only accepts a single search term as the third parameter.
       airport: 'EWR',
       count: 10
   }, function(data) {
-      console.log('here\'s some data: ', data);
+    if(data.arriving && data.departing)
+        console.log('here\'s some data: ', data);
   });
 </script>
 ```
