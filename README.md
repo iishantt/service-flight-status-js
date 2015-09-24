@@ -44,12 +44,10 @@ Include css file in head:
 ```
 
 ```javascript
-<script>
 $('.my-class').flightStatus({
     airport: 'EWR',
     count: 10
 });
-</script>
 ```
 
 Option | Type | Default | Description
@@ -63,14 +61,12 @@ cacheTime|int|30|How long we should cache the API results in minutes. Not applic
 Currently only accepts a single search term as the third parameter.
 
 ```javascript
-<script>
-  $.yelpWidget.flightStatus({
+$.yelpWidget.flightStatus({
       airport: 'EWR',
       count: 10
-  }, function(data) {
-    if(data.arriving && data.departing)
-        console.log('here\'s some data: ', data);
-  });
-</script>
+    }, function(data) {
+        if(data.arriving && data.departing)
+            console.log('here\'s some data: ', data);
+});
 ```
 
