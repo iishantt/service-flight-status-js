@@ -8,10 +8,6 @@
 		var _ = this;
 		_.$el = $(el).addClass('flight-status');
 		_.defaults = defaults;
-		_.requests = {
-			arriving: null,
-			departing: null
-		};
 
 		document.body.addEventListener('flightQuerySuccess');
 
@@ -26,9 +22,9 @@
 			arriving: 'https://flysmartapp.com/***/flight/SearchNextArrivingFlights',
 			departing: 'https://flysmartapp.com/***/flight/SearchNextDepartingFlights'
 		},
-		airport: 'EWR',
+		airport: null,
 		cacheTime: 30,
-		count: 5,
+		count: 10,
 		serverSideScript: '../curl.php'
 	};
 
@@ -39,7 +35,11 @@
 		// start requesting
 		var _ = this,
 			options = $.extend(defaults, customOptions);
-		_.listen();
+		_.requests = {
+			arriving: null,
+			departing: null
+		};
+		_.listen(callback);
 		_.pollAPI(customOptions, _.broadcast, 'arriving');
 		_.pollAPI(customOptions, _.broadcast, 'departing');
 	};
@@ -48,7 +48,7 @@
 	 * Listen for 'flightQuerySuccess' events. If we have successfully retrieved
 	 * data for each search term, make widget
 	 */
-	FlightStatus.prototype.listen = function() {
+	FlightStatus.prototype.listen = function(callback) {
 		var _ = this;
 		document.body.addEventListener('flightQuerySuccess', function() {
 			var requestsComplete;
@@ -58,7 +58,7 @@
 				}
 			}
 			if(requestsComplete)
-				_.makeWidget();
+				callback.call(_, _.requests);
 		});
 	};
 
@@ -161,6 +161,10 @@
 		});
 
 		_.$el.append($widget);
+	};
+
+	FlightStatus.prototype.poll = function(options, callback) {
+		FlightStatus.prototype.async(options, callback);
 	};
 
 	// Extend JQuery fn for $('$id').flightStatus()
