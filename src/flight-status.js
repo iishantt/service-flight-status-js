@@ -160,7 +160,7 @@
 			$widget.find('[data-type="' + toggle + '"]').addClass('active');
 		});
 
-		_.$el.append($widget);
+		_.$el.append('<p class="title">Flight Status</p>').append($widget);
 	};
 
 	FlightStatus.prototype.poll = function(options, callback) {

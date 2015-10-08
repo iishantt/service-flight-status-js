@@ -4,6 +4,12 @@
  * License: MIT
  */
  
+/*
+ * jQuery Flight Status Widget
+ * 2015 Matt O'Connell <mattoconnell408@gmail.com> 
+ * License: MIT
+ */
+ 
 (function($, ls) {
 	"use strict";
 
@@ -166,7 +172,7 @@
 			$widget.find('[data-type="' + toggle + '"]').addClass('active');
 		});
 
-		_.$el.append($widget);
+		_.$el.append('<p class="title">Flight Status</p>').append($widget);
 	};
 
 	FlightStatus.prototype.poll = function(options, callback) {
