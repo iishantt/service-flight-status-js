@@ -81,30 +81,34 @@
 			callback.call(_, data);
 			return false;
 		}
-		
-		$.ajax({
-			url: options.serverSideScript,
-			data: $.param({
-				url:url,
-				type:'json'
-			}),
-			success: function(data) {
-				if(data.error) {
-					console.log('Error querying API: ', data.error);
-					return false;
+		try{
+			$.ajax({
+				url: options.serverSideScript,
+				data: $.param({
+					url: url,
+					type: 'json'
+				}),
+				success: function(data) {
+					if(data.error) {
+						console.log('Error querying API: ', data.error);
+						return false;
+					}
+					data = JSON.parse(data);
+					if(ls)
+						ls.set(url, data);
+					if(callback) {
+						_.requests[direction] = data;
+						callback.call(_, data);
+					}
+				},
+				error: function(e) {
+					console.log(e);
 				}
-				data = JSON.parse(data);
-				if(ls)
-					ls.set(url, data);
-				if(callback) {
-					_.requests[direction] = data;
-					callback.call(_, data);
-				}
-			},
-			error: function(e) {
-				console.log(e);
-			}
-		});
+			});
+		} catch(e) {
+			console.log(e);
+		}
+
 	};
 
 	FlightStatus.prototype.makeURL = function(options, direction) {
