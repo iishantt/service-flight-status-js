@@ -64,9 +64,9 @@ Currently only accepts a single search term as the third parameter.
 $.yelpWidget.flightStatus({
       airport: 'EWR',
       count: 10
-    }, function(data) {
-        if(data.arriving && data.departing)
-            console.log('here\'s some data: ', data);
+}, function(data) {
+    if(data.arriving && data.departing)
+        console.log('here\'s some data: ', data);
 });
 ```
 
