@@ -54,7 +54,7 @@ Option | Type | Default | Description
 ------ | ---- | ------- | -----------
 airport|string|null|Shortcode for airport (ex: 'EWR' or 'LGA')
 count|int|10|Number of flights we'd like to list
-serverSideScript|string|'../oauth.php'|Server-side script for XSS
+serverSideScript|string|'curl.php'|Server-side script for XSS
 cacheTime|int|30|How long we should cache the API results in minutes. Not applicable if local-storage-lite script is included
 
 ### Make bare requests without widget

@@ -31,7 +31,7 @@
 		airport: null,
 		cacheTime: 30,
 		count: 10,
-		serverSideScript: '../curl.php'
+		serverSideScript: 'curl.php'
 	};
 
 	/*
