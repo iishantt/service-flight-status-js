@@ -6,7 +6,7 @@
     "jquery": "~1.10.2",
     "local-storage-lite": "*"
   },
-  "homepage": "https://github.com/BlueBiteLLC/Yelp-Widget.git",
+  "homepage": "https://github.com/BlueBiteLLC/service-flight-status-js.git",
   "authors": [
     "Matt O'Connell <mattoconnell408@gmail.com>"
   ],
